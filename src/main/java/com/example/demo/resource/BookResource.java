@@ -39,12 +39,12 @@ public class BookResource {
                         .build()
         );
     }
-    @GetMapping("/save")
+    @PostMapping("/save")
     public ResponseEntity<Response> saveBook(@RequestBody @Valid Book book){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
-                        .data(Map.of("books", book))
+                        .data(Map.of("books", bookService.create(book)))
                         .message("Book created")
                         .status(CREATED)
                         .statusCode(CREATED.value())
