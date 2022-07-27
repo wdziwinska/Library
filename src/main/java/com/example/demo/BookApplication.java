@@ -21,10 +21,10 @@ public class BookApplication {
 		return args -> {
 			bookRepo.save(new Book(null, "Mowa Ciala", "Barbra",
 					"psychologiczne", "2019",
-					"http://localhost:8080/library/image/book1.png"));
+					"http://localhost:8080/book/image/book1.png"));
 			bookRepo.save(new Book(null, "Emocje Ujawnione", "Paul Ekman",
 					"psychologiczne", "2007",
-					"http://localhost:8080/library/image/book2.png"));
+					"http://localhost:8080/book/image/book2.png"));
 		};
 	}
 

@@ -22,7 +22,7 @@ import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 
 @RestController
-@RequestMapping("/library")
+@RequestMapping("/book")
 @RequiredArgsConstructor
 public class BookResource {
     private final BookServiceImpl bookService;
