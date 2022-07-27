@@ -56,6 +56,6 @@ public class BookServiceImpl implements BookService {
 
     private String setBookImageUrl() {
         String[] imageNames = {"book1.png, book2.png, book3.png, book4.png"};
-        return ServletUriComponentsBuilder.fromCurrentContextPath().path("/demo/image" + imageNames[new Random().nextInt(4)]).toUriString();
+        return ServletUriComponentsBuilder.fromCurrentContextPath().path("/library/image" + imageNames[new Random().nextInt(4)]).toUriString();
     }
 }
