@@ -15,7 +15,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import static java.time.LocalDateTime.now;
 import static org.springframework.http.HttpStatus.CREATED;
@@ -25,17 +24,11 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RestController
 @RequestMapping("/book")
 @RequiredArgsConstructor
-@CrossOrigin
 public class BookResource {
     private final BookServiceImpl bookService;
 
     @GetMapping("/list")
-    public ResponseEntity<Response> getBooks(){
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public ResponseEntity<Response> getBook(){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
